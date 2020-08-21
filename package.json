@@ -1,0 +1,54 @@
+{
+    "name": "nix-lsp",
+    "displayName": "Nix LSP",
+    "description": "Support for the Nix Expression Language",
+    "version": "0.0.1",
+    "publisher": "aaronjanse",
+    "engines": {
+        "vscode": "^1.26.0"
+    },
+    "categories": [
+        "Programming Languages"
+    ],
+    "activationEvents": [
+        "onLanguage:nix"
+    ],
+    "main": "./out/extension",
+    "contributes": {
+        "languages": [
+            {
+                "id": "nix",
+                "aliases": [
+                    "Nix"
+                ],
+                "extensions": [
+                    ".nix"
+                ],
+                "configuration": "./nix.configuration.json"
+            }
+        ],
+        "grammars": [
+            {
+                "language": "nix",
+                "scopeName": "source.nix",
+                "path": "./syntaxes/nix.tmLanguage"
+            }
+        ]
+    },
+    "scripts": {
+        "vscode:prepublish": "npm run compile",
+        "compile": "tsc -p ./",
+        "watch": "tsc -watch -p ./"
+    },
+    "dependencies": {
+        "vscode-languageclient": "^5.1.1"
+    },
+    "devDependencies": {
+        "typescript": "2.6.1",
+        "vsce": "^1.52.0",
+        "tslint": "^5.8.0",
+        "@types/node": "^8.10.25",
+        "@types/mocha": "^2.2.42",
+        "@types/vscode": "^1.37.0"
+    }
+}
