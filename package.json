@@ -3,7 +3,11 @@
     "displayName": "Nix LSP",
     "description": "Support for the Nix Expression Language",
     "version": "0.0.1",
-    "publisher": "aaronjanse",
+    "publisher": "aaronduino",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/aaronjanse/vscode-nix-lsp.git"
+    },
     "engines": {
         "vscode": "^1.26.0"
     },
@@ -49,6 +53,6 @@
         "tslint": "^5.8.0",
         "@types/node": "^8.10.25",
         "@types/mocha": "^2.2.42",
-        "@types/vscode": "^1.37.0"
+        "@types/vscode": "^1.26.0"
     }
 }
